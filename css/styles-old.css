@@ -633,7 +633,7 @@ bottom: 8px;
 }
 
 .button:hover>svg,
-button:focus>svg {
+.button:focus>svg {
     fill: #ffffff;
 }
 

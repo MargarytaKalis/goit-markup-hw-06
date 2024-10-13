@@ -49,8 +49,10 @@ button {
 
 .container {
     max-width: 320px;
-    padding: 0 16px;
-    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,6 +227,7 @@ button {
 
 .mobile-menu {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
@@ -249,27 +252,61 @@ button {
 
 .mobile-menu-container {
     position: relative;
+    height: 100%;
     padding-top: 72px;
     padding-bottom: 40px;
     
     display: flex;
     flex-direction: column;
-    height: 100%;
+   
 }
 
 .mobile-menu-close {
     position: absolute;
-    top: 24px;
-    right: 24px;
-    border-radius: 50%;
-        fill: #e7e9fc;
+        display: flex;
+        top: 24px;
+        right: 24px;
+        border-radius: 50%;
+        background-color: #e7e9fc;
         stroke-width: 1px;
-        stroke: #2e2f42;
+        stroke: rgba(0, 0, 0, 0.1);
+        width: 24px;
+        height: 24px;
+        line-height: 0;
+        padding: 0;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        opacity 250ms;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+} 
+
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    background-color: #404bbf;
+    border: 0;
 }
 
+
+.mobile-menu-close:hover>svg,
+.mobile-menu-close:hover>svg {
+    fill: #ffffff
+}
+
+
+
 .mobile-menu-icon-close {
-  fill: #2e2f42;
-  
+position: absolute;
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   justify-content: center;
+   align-items: center;
+}
+
+.mobile-menu-icon-close:hover,
+.mobile-menu-icon-close:focus {
+    fill: #fff;
 }
 
 .mobile-menu-nav {
@@ -290,8 +327,15 @@ button {
         color: #2e2f42;
 }
 
-.mobile-menu-item.first-page {
+.mobile-menu-item:hover,
+.mobile-menu-item:focus {
     color: #404bbf;
+}
+
+.contacts-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .menu-link {
@@ -304,7 +348,8 @@ button {
         font-style: normal;
 }
 
-.menu-tel {
+.menu-link:hover,
+.menu-link:focus {
    color: #4d5ae5; 
    padding-bottom: 24px;
 }
@@ -333,6 +378,10 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-link-icon:hover,
+.menu-link-icon:focus {
+    background-color: #31d0aa;
+}
 
 .menu-icon {
     fill: #f4f4fd;
