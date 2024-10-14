@@ -350,14 +350,13 @@ position: absolute;
 .menu-link:hover,
 .menu-link:focus {
    color: #4d5ae5; 
-   padding-bottom: 24px;
 }
 
 .menu-list {
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding-top: 48px;
+    margin-top: 48px;
 }
 
 .menu-app-icon {
@@ -868,12 +867,12 @@ font-weight: 500;
 .footer-container {
     display: flex;
    flex-wrap: wrap;
-   justify-content: center;
    align-items: center;
 }
 
 .first-container {
    text-align: center;
+margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -889,8 +888,12 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: #f4f4fd;
 text-align: left;
-margin-bottom: 72px;
 }
+
+.footer-container-icon {
+    margin-bottom: 72px;
+}
+
 
 .footer-title {
     font-weight: 500;
@@ -905,7 +908,6 @@ margin-bottom: 72px;
 .footer-list {
     display: flex;
     gap: 16px;
-    margin-bottom: 72px;
 }
 
 .footer-item {
@@ -948,7 +950,6 @@ margin-bottom: 72px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
 }
 
 .form-footer-input {
@@ -1004,13 +1005,13 @@ display: flex;
 
 @media screen and (min-width: 768px) {
 .footer-container {
-    justify-content: center;
     align-items: flex-start;
       gap: 72px 24px;
     }
 
 .first-container {
     text-align: left;
+    margin-bottom: 0;
 }
 
 .footer-paragraph {
@@ -1029,7 +1030,7 @@ display: flex;
 }
 
 .footer-container-icon {
-  width: 208px;
+  margin-bottom: 0px;
 }
 
 .form-footer {
@@ -1038,6 +1039,10 @@ display: flex;
         align-items: baseline;
         margin-bottom: 0;
     }
+
+        .form-footer-input {
+        margin-bottom: 0;
+        }
     }
 
 
@@ -1110,7 +1115,7 @@ display: flex;
     left: 50%;
     border-radius: 4px;
     transform: translate(-50%, -50%);
-    width: 288;
+    width: 288px;
     min-height: 623px;
     background-color: #fcfcfc;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
